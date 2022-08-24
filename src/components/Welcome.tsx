@@ -11,7 +11,7 @@ const Welcome = () => {
             <Link to="/search">tap here to navigate to the search</Link>
             <div style={{ margin: '8px' }}>
                 <span> Or press this btn </span>
-                <button onClick={() => navigate('/search')}>
+                <button data-testid="navBtn" onClick={() => navigate('/search')}>
                     Go to Search
                 </button>
             </div>

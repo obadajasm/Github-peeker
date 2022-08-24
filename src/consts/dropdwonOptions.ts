@@ -5,6 +5,6 @@ export const DropdwonOptions = [
     },
     {
         label: 'Repository',
-        value: 'repositories',
+        value: 'repos',
     }
 ]

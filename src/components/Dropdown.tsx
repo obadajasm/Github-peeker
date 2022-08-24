@@ -1,4 +1,4 @@
-import { ChangeEvent } from "react";
+import { ChangeEvent, memo } from "react";
 import PropTypes from 'prop-types';
 const Dropdown = ({
     value='' ,
@@ -19,4 +19,4 @@ const Dropdown = ({
 Dropdown.propTypes = {
     options: PropTypes.arrayOf(PropTypes.shape({label: PropTypes.string,value:PropTypes.string})),
 }
-export default Dropdown;
+export default memo(Dropdown);

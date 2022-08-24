@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { SmallP } from "./SmallParagraph";
 
 const StyledCard = styled.div`
     width: 160px;
@@ -11,9 +12,7 @@ const StyledCard = styled.div`
     margin: 8px;
 `;
 
-const SmallP= styled.p`
-        margin:2px;
-`
+
 
 const Card = ({ title = '', secondary='', imgSrc = '', info ={} } :
 {info?: Record<string,string | number>,title: string,secondary?: string,imgSrc?: string}) => {

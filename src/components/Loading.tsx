@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { useAppSelector } from "../store/hooks";
 
 const Loading = ({ loader }: { loader: React.RefObject<HTMLDivElement> }) => {
@@ -12,4 +13,4 @@ const Loading = ({ loader }: { loader: React.RefObject<HTMLDivElement> }) => {
     )
 }
 
-export default Loading;
+export default memo(Loading);
