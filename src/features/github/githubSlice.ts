@@ -50,7 +50,7 @@ export const githubSlice = createSlice({
     },
     paginateUsers(state, { payload }) {
 
-      state.users = paginationHelper('users', state, payload);
+      state.users = paginationHelper('users', current(state), payload);
     },
     setRepos(state, action) {
       state.repos = action.payload

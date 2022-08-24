@@ -13,7 +13,7 @@
 
 
 export const paginationHelper = (type: 'users' | 'repos', state: any, payload: any) => {
-    let oldItems = (state[type])?.items.slice() ?? [];
+    let oldItems = (state[type])?.items?.slice() ?? [];
     let newItems = [...(payload?.items ?? [])];
   
     [oldItems, newItems] = removeDuplicationUsingID(oldItems, newItems);

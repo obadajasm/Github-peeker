@@ -5,11 +5,15 @@ import { useAppSelector } from "../store/hooks";
 import Card from "./Card";
 import Loading from "./Loading";
 
-const ItemsList = ({ type, loader, shouldShow, }:
+const ItemsList = ({ type, loader, shouldShow }:
   { type: 'users' | 'repos', loader: React.RefObject<HTMLDivElement>, shouldShow: boolean }) => {
+
   const typeItem = useAppSelector((state) => state.github[type]) ?? null;
+  const status = useAppSelector((state) => state.github.status) ?? null;
+  const isLoading = status === 'loading';
   let items = typeItem?.items ?? [];
   let DisplayedCard: any;
+
   if (type === 'users') {
     DisplayedCard = (e: User) => <Card key={e.id} title={e.login} imgSrc={e.avatar_url} />
   } else {
@@ -28,18 +32,24 @@ const ItemsList = ({ type, loader, shouldShow, }:
 
   }
   return (
-    items.length > 0 ?
-      <>
-        {
-          items.map(
-            (e) => (DisplayedCard(e))
-          )
-        }
-        {
-          shouldShow ? <Loading loader={loader} /> : null
-        }
+    <>
+      {
+        items.length > 0 ?
+          <>
+            {
+              items.map(
+                (e) => (DisplayedCard(e))
+              )
+            }
+            {
+              shouldShow && !isLoading ? <Loading loader={loader} /> : null
+            }
 
-      </> : null
+          </> : ( !isLoading &&  <p> Nothing to see here '| </p>)
+      }
+      {isLoading && <p style={{color: 'red', fontSize:30}}> Loading...</p>}
+    </>
+
   )
 }
 export default memo(ItemsList);
