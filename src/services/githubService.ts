@@ -9,7 +9,7 @@ export class GithubService {
       const res: any = await http.get('/users', {
          qp: {
             q,
-            page: page.toString()
+            page: page.toString(),
          },
          config: {
             signal
@@ -27,7 +27,7 @@ export class GithubService {
       const res: any = await http.get('/repositories', {
          qp: {
             q,
-            page: page.toString()
+            page: page.toString(),
          },
          config: {
             signal

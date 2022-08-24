@@ -19,7 +19,7 @@ let persistor = persistStore(store);
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-    <PersistGate loading={ <p> WtF LOADING </p>} persistor={persistor}>
+     <PersistGate loading={ null } persistor={persistor}>
         <App/>
         </PersistGate>
     </Provider>
