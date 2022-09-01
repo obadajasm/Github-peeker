@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Github-peeker/static/css/main.d561063b.css",
-    "main.js": "/Github-peeker/static/js/main.182cc1f9.js",
-    "static/js/787.27822c70.chunk.js": "/Github-peeker/static/js/787.27822c70.chunk.js",
-    "index.html": "/Github-peeker/index.html",
-    "main.d561063b.css.map": "/Github-peeker/static/css/main.d561063b.css.map",
-    "main.182cc1f9.js.map": "/Github-peeker/static/js/main.182cc1f9.js.map",
-    "787.27822c70.chunk.js.map": "/Github-peeker/static/js/787.27822c70.chunk.js.map"
+    "main.css": "/github-peeker/static/css/main.d561063b.css",
+    "main.js": "/github-peeker/static/js/main.4e59f8d6.js",
+    "static/js/787.27822c70.chunk.js": "/github-peeker/static/js/787.27822c70.chunk.js",
+    "index.html": "/github-peeker/index.html",
+    "main.d561063b.css.map": "/github-peeker/static/css/main.d561063b.css.map",
+    "main.4e59f8d6.js.map": "/github-peeker/static/js/main.4e59f8d6.js.map",
+    "787.27822c70.chunk.js.map": "/github-peeker/static/js/787.27822c70.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d561063b.css",
-    "static/js/main.182cc1f9.js"
+    "static/js/main.4e59f8d6.js"
   ]
 }
