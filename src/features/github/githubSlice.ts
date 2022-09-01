@@ -72,7 +72,7 @@ export const fetchUsers =
 
       handleDataFetch<ApiResponse<User>>({
         query, page, type: 'users', state: getState().github, dispatch,
-        cb: async (response: any) => {
+        cb: async (response) => {
 
           if (!response) {
             response = await GithubService.getUsers(query, signal, page);
@@ -108,7 +108,7 @@ export const fetchRepos =
 
 
 export const handleDataFetch = async <T>({ query, page, type, cb, state, dispatch }:
-  { query: string, page: number, type: 'repos' | 'users', cb: Function, state: any, dispatch: any }) => {
+  { query: string, page: number, type: 'repos' | 'users', cb: (res:T | undefined)=>Promise<void>, state: any, dispatch: any }) => {
   try {
     const requestKey = `${type}-${page}-${query}`;
     const totalCount = state[type]?.total_count;
@@ -120,7 +120,7 @@ export const handleDataFetch = async <T>({ query, page, type, cb, state, dispatc
 
     dispatch(setError(''));
     dispatch(setStatus('loading'))
-    let response;
+    let response: T | undefined;
     if (Object.hasOwn(state.history, requestKey)) {
       response = state.history[requestKey] as unknown as T;
     }

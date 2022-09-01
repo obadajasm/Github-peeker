@@ -4,12 +4,7 @@ import githubSliceReducer from '../features/github/githubSlice';
 import storage from 'redux-persist/lib/storage'
 import {
   persistReducer,
-  FLUSH,
-  REHYDRATE,
-  PAUSE,
   PERSIST,
-  PURGE,
-  REGISTER,
 } from 'redux-persist'
 
 const persistConfig = {

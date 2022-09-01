@@ -41,6 +41,6 @@ interface HttpConfig {
 
 
 export const http = HttpService.getInstance('https://api.github.com/search', {
-    'Authorization': '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',
+    'Authorization': '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',
     'Content-Type': 'application/json',
 });
